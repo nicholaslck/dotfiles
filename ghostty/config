@@ -1,0 +1,3 @@
+font-family = "Hack Nerd Font Mono"
+
+theme = dark:catppuccin-mocha.conf,light:catppuccin-latte.conf
