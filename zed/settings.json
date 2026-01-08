@@ -9,20 +9,21 @@
 {
   "agent_servers": {
     "gemini": {
-      "ignore_system_version": false
-    }
+      "ignore_system_version": false,
+    },
   },
   "ssh_connections": [],
   "icon_theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Mocha",
   },
   "agent_ui_font_size": 15.0,
   "buffer_line_height": "comfortable",
   "buffer_font_family": ".ZedMono",
   "buffer_font_weight": 400.0,
   "format_on_save": "off",
+  "formatter": "auto",
   "vim_mode": false,
   "context_servers": {},
   "edit_predictions": {
@@ -30,36 +31,47 @@
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null,
-      "enterprise_uri": null
+      "enterprise_uri": null,
     },
-    "enabled_in_text_threads": false
+    "enabled_in_text_threads": false,
   },
   "agent": {
     "profiles": {},
     "default_profile": "write",
     "inline_assistant_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "model": "gpt-5-mini",
     },
     "default_model": {
       "provider": "google",
-      "model": "gemini-3-pro"
-    }
+      "model": "gemini-3-pro",
+    },
   },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "zed",
   },
   "ui_font_size": 15.0,
   "buffer_font_size": 12.0,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte - No Italics",
-    "dark": "Catppuccin Mocha - No Italics"
+    "dark": "Catppuccin Mocha - No Italics",
   },
   "terminal": {
     "shell": "system",
     "font_size": 12.0,
-    "font_family": "Hack Nerd Font Mono"
+    "font_family": "Hack Nerd Font Mono",
   },
-  "tab_size": 2
+  "tab_size": 2,
+  "languages": {
+    "Shell Script": {
+      "formatter": {
+        "external": {
+          "command": "shfmt",
+          // Change `--indent 2` to match your preferred tab_size
+          "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
+        },
+      },
+    },
+  },
 }
