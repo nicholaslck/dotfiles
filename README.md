@@ -15,32 +15,15 @@ This dotfiles collection includes configurations for:
 
 ## Installation
 
-There are two simple ways to install these dotfiles:
+1. Git clone this repository to a location
 
-### Method 1: Clone and Symlink
-
-1. Clone this repository to your desired location:
-
-   ```bash
-   git clone https://github.com/nicholaslck/dotfiles.git ~/dotfiles
-   ```
-
-2. Create symbolic links to the `~/.config` folder:
-   ```bash
-   cd ~/dotfiles
-   for file in *; do
-     if [ -d "$file" ]; then
-       ln -s "$(pwd)/$file" "$HOME/.config/$file"
-     fi
-   done
-   ```
-
-### Method 2: Direct Clone
-
-Clone the repository directly into your `~/.config` folder:
-
-```bash
+```zsh
 git clone https://github.com/nicholaslck/dotfiles.git ~/.config
+```
+
+2. Create symbolic links to the home directory
+```zsh
+
 ```
 
 ## Notes
