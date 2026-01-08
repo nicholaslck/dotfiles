@@ -1,4 +1,6 @@
 #!/bin/zsh
+#
+# This script simply asks a question to Perplexity AI and gets markdown output.
 
 # List of dependencies to check
 dependencies=("llm" "glow")
