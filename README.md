@@ -22,8 +22,9 @@ git clone https://github.com/nicholaslck/dotfiles.git ~/.config
 ```
 
 2. Create symbolic links to the home directory
-```zsh
 
+```zsh
+ln -s ~/.config/.zshrc ~/.zshrc
 ```
 
 ## Notes
