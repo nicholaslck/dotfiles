@@ -1,3 +1,5 @@
+# This file is sourced by interactive shells
+
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 plug "Aloxaf/fzf-tab"
@@ -11,20 +13,8 @@ plug "zsh-users/zsh-history-substring-search"
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-BREW_PREFIX=$(brew --prefix)
-
-# Added by LM Studio CLI (lms)
-export PATH="$HOME/.lmstudio/bin:$PATH"
-
-# ruby (via homebrew)
-export PATH="$BREW_PREFIX/opt/ruby/bin:$PATH"
-export PATH="$BREW_PREFIX/lib/ruby/gems/3.4.0/bin:$PATH"
-
-# Added by Antigravity
-export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
-
 # zsh completions
-fpath=($BREW_PREFIX/share/zsh/site-functions $fpath)
+fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 
 # zsh compinit
 autoload -Uz compinit && compinit
@@ -50,13 +40,6 @@ alias lgit="lazygit"
 
 # custom llm caller alias
 alias pplx="~/.config/.scripts/pplx.sh"
-
-# Ollama origins for Obsidian Copilot
-# **Disabled the following lines because I no longer run Ollama services here**
-# export OLLAMA_ORIGINS=*
-# export OLLAMA_HOST="127.0.0.1"
-# launchctl setenv OLLAMA_ORIGINS $OLLAMA_ORIGINS
-# launchctl setenv OLLAMA_HOST $OLLAMA_HOST
 
 # compdef pnpm
 ###- begin-pnpm-completion -###

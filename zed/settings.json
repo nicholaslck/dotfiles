@@ -37,14 +37,14 @@
   },
   "agent": {
     "profiles": {},
-    "default_profile": "write",
+    "default_profile": "ask",
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "gpt-5-mini",
     },
     "default_model": {
       "provider": "google",
-      "model": "gemini-3-pro",
+      "model": "gemini-3-flash-preview",
     },
   },
   "features": {
