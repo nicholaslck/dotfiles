@@ -17,9 +17,10 @@ bindkey '^[[B' history-substring-search-down
 fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 
 # zsh compinit
-source ~/.config/zsh/pnpm_comp.sh
-source ~/.config/zsh/gitleaks_comp.sh
-autoload -Uz compinit && compinit
+source ~/.config/zsh/comps/pnpm_comp.sh
+source ~/.config/zsh/comps/gitleaks_comp.sh
+autoload -Uz compinit
+compinit
 
 # Custom aliases
 alias la="ls -a"

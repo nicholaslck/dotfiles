@@ -24,7 +24,7 @@ git clone https://github.com/nicholaslck/dotfiles.git ~/.config
 
 ## Notes
 
-- This repository is designed for macOS systems
+- This repository is designed for ARM macOS systems
 - Some applications may need to be restarted or reloaded after installation
 - Individual tool configurations may have their own dependencies
 - The configurations are tailored to my personal workflow and preferences
