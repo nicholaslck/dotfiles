@@ -28,7 +28,6 @@ alias c="clear"
 alias reboot="sudo /sbin/reboot"
 alias shutdown="sudo /sbin/shutdown -h now"
 alias reload="exec zsh"
-alias checkin="brew update && brew upgrade"
 
 # neovim
 alias vim="nvim"
@@ -42,6 +41,7 @@ alias lgit="lazygit"
 
 # custom llm caller alias
 alias pplx="~/.config/zsh/scripts/pplx.sh"
+alias update="~/.config/zsh/scripts/update.sh"
 
 # zoxide to replace cd
 eval "$(zoxide init --cmd "cd" zsh)"
