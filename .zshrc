@@ -41,7 +41,7 @@ eval $(thefuck --alias)
 alias lgit="lazygit"
 
 # custom llm caller alias
-alias pplx="~/.config/.scripts/pplx.sh"
+alias pplx="~/.config/zsh/scripts/pplx.sh"
 
 # zoxide to replace cd
 eval "$(zoxide init --cmd "cd" zsh)"

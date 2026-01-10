@@ -15,16 +15,11 @@ This dotfiles collection includes configurations for:
 
 ## Installation
 
-1. Git clone this repository to a location
+Run the installation script:
 
 ```zsh
 git clone https://github.com/nicholaslck/dotfiles.git ~/.config
-```
-
-2. Create symbolic links to the home directory
-
-```zsh
-ln -s ~/.config/.zshrc ~/.zshrc
+~/.config/install.sh
 ```
 
 ## Notes
