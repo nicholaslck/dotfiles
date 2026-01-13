@@ -43,6 +43,7 @@ alias lgit="lazygit"
 # custom llm caller alias
 alias pplx="~/.config/zsh/scripts/pplx.sh"
 alias update="~/.config/zsh/scripts/update.sh"
+alias brewbackup="~/.config/zsh/scripts/brew_backup.sh"
 
 # zoxide to replace cd
 eval "$(zoxide init --cmd "cd" zsh)"
