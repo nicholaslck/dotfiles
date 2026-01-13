@@ -1,4 +1,4 @@
-# Exported on 2026-01-10 22:53:10
+# Exported on 2026-01-13 17:45:19
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
@@ -32,7 +32,6 @@ brew "pinentry-mac"
 brew "pnpm"
 brew "qt@5"
 brew "ruby"
-brew "sherlock"
 brew "shfmt"
 brew "supabase/tap/supabase"
 brew "thefuck"
@@ -77,3 +76,4 @@ cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
 cask "zed"
+
