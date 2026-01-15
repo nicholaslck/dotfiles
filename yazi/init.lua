@@ -1,3 +1,4 @@
+-- define function for display file size and mtime on the right side of the current panel
 function Linemode:size_and_mtime()
   ---@type string|integer|osdate
   local time = math.floor(self._file.cha.mtime or 0)
@@ -13,3 +14,24 @@ function Linemode:size_and_mtime()
   local size = self._file:size()
   return string.format("%s | %s", size and ya.readable_size(size) or "-", time)
 end
+
+-- display file owner and group in status bar
+Status:children_add(function()
+  local h = cx.active.current.hovered
+  if not h or ya.target_family() ~= "unix" then
+    return ""
+  end
+
+  return ui.Line {
+    ui.Span(ya.user_name(h.cha.uid) or tostring(h.cha.uid)):fg("magenta"),
+    ":",
+    ui.Span(ya.group_name(h.cha.gid) or tostring(h.cha.gid)):fg("magenta"),
+    " ",
+  }
+end, 500, Status.RIGHT)
+
+-- plugin: full-border https://github.com/yazi-rs/plugins/tree/main/full-border.yazi
+require("full-border"):setup {
+  -- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
+  type = ui.Border.ROUNDED,
+}

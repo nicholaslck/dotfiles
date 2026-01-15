@@ -47,3 +47,6 @@ alias brewbackup="~/.config/zsh/scripts/brew_backup.sh"
 
 # zoxide to replace cd
 eval "$(zoxide init --cmd "cd" zsh)"
+
+# yazi
+source ~/.config/yazi/shell.sh
