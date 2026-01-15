@@ -1,5 +1,3 @@
-# This file is sourced by interactive shells
-
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 plug "Aloxaf/fzf-tab"
@@ -33,6 +31,8 @@ alias reload="exec zsh"
 # neovim
 alias vim="nvim"
 alias vi="nvim"
+export EDITOR=nvim
+export VISUAL=nvim
 
 # thefuck alias
 eval $(thefuck --alias)
