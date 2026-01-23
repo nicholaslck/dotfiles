@@ -1,0 +1,6 @@
+node_modules
+package.json
+bun.lock
+
+# Not tracking skills/ folder becase it should be managed in .agents/
+skills/
