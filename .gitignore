@@ -1,10 +1,8 @@
-.DS_Store
+**/.DS_Store
 **/__pycache__/
 
 flutter/
+
 Futu-Mac/
+
 raycast/
-opencode/
-zed/conversations/
-zed/embeddings/
-zed/prompts/

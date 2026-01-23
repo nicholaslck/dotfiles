@@ -24,4 +24,5 @@ echo "fetching casks"
 brew list --casks | xargs -I {} echo "cask \"{}\"" >>$BREWFILE
 echo "" >>$BREWFILE
 
-echo "bundle completed. Please review the file at $BREWFILE"
+echo "Brew bundle completed. Please review the file at $BREWFILE"
+echo ""
