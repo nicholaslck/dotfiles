@@ -27,11 +27,10 @@ export PATH=$HOME/.gem/bin:$PATH
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="$HOME/.pnpm"
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+export PATH="$HOME/.pnpm:$PATH"
+
+# bun
+export PATH="$HOME/.bun/bin:$PATH"
 
 # CHROME_EXECUTABLE for flutter
 export CHROME_EXECUTABLE="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
