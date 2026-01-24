@@ -46,8 +46,9 @@ alias update="~/.config/zsh/scripts/update.sh"
 alias brewbackup="~/.config/zsh/scripts/brew_backup.sh"
 
 alias oc="opencode"
-alias gc="gemini"
 alias kc="kilocode"
+
+alias skills="bunx --bun skills"
 
 # zoxide to replace cd
 eval "$(zoxide init --cmd "cd" zsh)"
