@@ -1,0 +1,41 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "blender": {
+      "enabled": false,
+      "type": "local",
+      "command": ["uvx", "blender-mcp"]
+    },
+    "context7": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp/oauth"
+    },
+    "linear": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.linear.app/mcp"
+    },
+    "pencil": {
+      "command": [
+        "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+        "--ws-port",
+        "64320"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "chrome-devtools": {
+      "command": ["bunx", "chrome-devtools-mcp"],
+      "enabled": true,
+      "type": "local"
+    }
+  },
+  "permission": {
+    "bash": {
+      "rm *": "ask",
+      "git *": "allow",
+      "git push *": "ask"
+    }
+  }
+}
