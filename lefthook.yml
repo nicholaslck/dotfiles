@@ -1,0 +1,11 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+
+pre-commit:
+  jobs:
+    - name: gitleaks audit
+      tags:
+        - security
+      run: gitleaks git --staged
