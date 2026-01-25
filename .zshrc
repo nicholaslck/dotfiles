@@ -53,3 +53,5 @@ eval "$(zoxide init --cmd "cd" zsh)"
 
 # yazi
 source ~/.config/yazi/shell.sh
+
+source ~/.config/zsh/scripts/activate_venv.sh
