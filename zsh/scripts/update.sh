@@ -7,7 +7,8 @@ zap update all
 
 # brew update and brew upgrade
 echo "Updating brew formulas and casks..."
-brew update && brew upgrade
+brew update
+brew upgrade --greedy
 
 # yazi plugins upgrade
 echo "Updating yazi plugins..."
