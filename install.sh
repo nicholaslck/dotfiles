@@ -15,5 +15,7 @@ brew bundle install --file ~/.config/homebrew/Brewfile
 # symlink zshrc
 ~/.config/zsh/links.sh
 
+# yazi plugins
+ya pkg install
 
 echo "Done. Please restart your terminal."

@@ -13,3 +13,7 @@ brew upgrade --greedy
 # yazi plugins upgrade
 echo "Updating yazi plugins..."
 ya pkg upgrade
+
+# tmux plugin manager upgrade
+echo "Updating tmux plugin manager..."
+[ -d ~/.tmux/plugins/tpm ] && git -C ~/.tmux/plugins/tpm pull
