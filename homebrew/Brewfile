@@ -1,4 +1,4 @@
-# Exported on 2026-02-06 15:55:06
+# Exported on 2026-02-06 16:25:28
 tap "anomalyco/tap"
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
@@ -45,6 +45,7 @@ brew "shfmt"
 brew "supabase/tap/supabase"
 brew "thefuck"
 brew "tlrc"
+brew "tmux"
 brew "tree"
 brew "tree-sitter"
 brew "tree-sitter-cli"
