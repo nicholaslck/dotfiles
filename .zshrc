@@ -55,3 +55,12 @@ eval "$(zoxide init --cmd "cd" zsh)"
 source ~/.config/yazi/shell.sh
 
 source ~/.config/zsh/scripts/activate_venv.sh
+
+# auto attach to tmux session
+if [[ -z "$TMUX" ]]; then
+  if tmux ls &>/dev/null; then
+    exec tmux attach-session
+  else
+    exec tmux new-session -s default
+  fi
+fi
