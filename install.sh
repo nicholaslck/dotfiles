@@ -15,4 +15,5 @@ brew bundle install --file ~/.config/homebrew/Brewfile
 # symlink zshrc
 ~/.config/zsh/links.sh
 
+
 echo "Done. Please restart your terminal."
