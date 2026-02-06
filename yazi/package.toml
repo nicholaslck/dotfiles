@@ -13,5 +13,10 @@ use = "yazi-rs/plugins:git"
 rev = "230b9c6"
 hash = "270915fa8282a19908449530ff66f7e2"
 
+[[plugin.deps]]
+use = "boydaihungst/mediainfo"
+rev = "dc61636"
+hash = "2fa34959353b6f1a1c33659f50e098fd"
+
 [flavor]
 deps = []
