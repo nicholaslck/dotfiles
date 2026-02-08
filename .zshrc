@@ -55,3 +55,7 @@ eval "$(zoxide init --cmd "cd" zsh)"
 source ~/.config/yazi/shell.sh
 
 source ~/.config/zsh/scripts/activate_venv.sh
+
+if [ $TERM_PROGRAM = "ghostty" ]; then
+  source ~/.config/tmux/attach.sh
+fi

@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "use_system_prompts": false,
+  "disable_ai": false,
   "session": {
     "trust_all_worktrees": true,
   },
@@ -36,7 +38,7 @@
   },
   "agent_ui_font_size": 15.0,
   "buffer_line_height": "comfortable",
-  "buffer_font_family": ".ZedMono",
+  "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_weight": 400.0,
   "format_on_save": "off",
   "formatter": "auto",
@@ -44,7 +46,7 @@
   "context_servers": {},
   "edit_predictions": {
     "provider": "zed",
-    "mode": "eager",
+    "mode": "subtle",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null,
@@ -56,12 +58,12 @@
     "profiles": {},
     "default_profile": "ask",
     "inline_assistant_model": {
-      "provider": "google",
-      "model": "gemini-3-flash-preview",
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
     },
     "default_model": {
-      "provider": "google",
-      "model": "gemini-3-flash-preview",
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini",
     },
   },
   "ui_font_size": 15.0,
@@ -74,7 +76,7 @@
   "terminal": {
     "shell": "system",
     "font_size": 12.0,
-    "font_family": "Hack Nerd Font Mono",
+    "font_family": "FiraCode Nerd Font",
   },
   "tab_size": 2,
   "languages": {

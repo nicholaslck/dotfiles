@@ -1,3 +1,2 @@
-font-family = "Hack Nerd Font Mono"
-command = shell:/Users/nicholaslck/.config/tmux/attach.sh
+font-family = "FiraCode Nerd Font"
 theme = dark:catppuccin-mocha.conf,light:catppuccin-latte.conf
