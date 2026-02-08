@@ -14,7 +14,7 @@
   },
   "base_keymap": "VSCode",
   "git_panel": {
-    "tree_view": true,
+    "tree_view": false,
   },
   "agent_servers": {
     "gemini": {
