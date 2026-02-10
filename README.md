@@ -22,6 +22,14 @@ git clone https://github.com/nicholaslck/dotfiles.git ~/dotfiles
 ~/dotfiles/setup.sh
 ```
 
+## Tools
+
+This project uses the following tools for management:
+
+- **Just**: A command runner for executing common tasks (see `justfile`)
+- **Dotbot**: A tool that bootstraps and configures dotfiles by creating symlinks (see `dotbot.yml`)
+- **Brew Bundle**: Homebrew's bundle feature for managing all packages, casks, and taps via `Brewfile`
+
 ## Notes
 
 - This repository is designed for ARM macOS systems

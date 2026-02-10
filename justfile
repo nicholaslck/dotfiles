@@ -7,8 +7,6 @@ link:
 push:
     git push
 
-install: brew_install link yazi_install tmux_install
-
 [group('install')]
 brew_install:
     brew bundle install --file ./Brewfile
@@ -25,13 +23,12 @@ tmux_install:
     fi
     $TPM_DIR/bin/install_plugins
 
+install: brew_install link yazi_install tmux_install
+
 [group('sync')]
 brew_sync:
     scripts/brew-dump.sh .
     git add ./Brewfile
-
-[parallel]
-update: zap_update brew_update yazi_update tmux_update
 
 [group('update')]
 zap_update:
@@ -53,3 +50,6 @@ tmux_update:
     #!/bin/zsh
     [ -d $TPM_DIR ] && git -C $TPM_DIR pull
     $TPM_DIR/bin/update_plugins all
+
+[parallel]
+update: zap_update brew_update yazi_update tmux_update
