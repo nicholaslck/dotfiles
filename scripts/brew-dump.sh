@@ -5,7 +5,12 @@
 # I don't like that.
 # Therefore, the following scripts does the job.
 
-BREWFILE=$HOME/.config/homebrew/Brewfile
+if [[ -z $1 ]]; then
+  DEST_DIR=$(pwd)
+else
+  DEST_DIR=${1:a}
+fi
+BREWFILE=$DEST_DIR/Brewfile
 
 echo "# Exported on $(date "+%Y-%m-%d %H:%M:%S")" >$BREWFILE
 

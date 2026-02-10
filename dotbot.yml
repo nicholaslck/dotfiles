@@ -1,0 +1,48 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+      glob: true
+
+- clean:
+    - "~"
+    - ~/.config
+    - ~/.local/bin
+
+- create:
+    - ~/projects
+    - ~/temp
+
+- link:
+    ~/.config/aerospace/aerospace.toml: config/aerospace/aerospace.toml
+    ~/.config/aerospace/swap-current-workspace-to-workspace.sh: config/aerospace/swap-current-workspace-to-workspace.sh
+    ~/.config/borders/bordersrc: config/borders/bordersrc
+    ~/.config/btop/themes/: config/btop/themes/**
+    ~/.config/btop/btop.conf: config/btop/btop.conf
+    ~/.config/fastfetch/config.jsonc: config/fastfetch/config.jsonc
+    ~/.config/gh/config.yml: config/gh/config.yml
+    ~/.config/gh/hosts.yml: config/gh/hosts.yml
+    ~/.config/ghostty/themes/: config/ghostty/themes/**
+    ~/.config/ghostty/config: config/ghostty/config
+    ~/.config/homebrew/brew.env: config/homebrew/brew.env
+    ~/.config/lazygit/config.yml: config/lazygit/config.yml
+    ~/.config/nvim/: config/nvim/**
+    ~/.config/opencode/opencode.json: config/opencode/opencode.json
+    ~/.config/opencode/agents/: config/opencode/agents/**
+    ~/.config/thefuck/settings.py: config/thefuck/settings.py
+    ~/.config/thefuck/rules/: config/thefuck/rules/**
+    ~/.config/tmux/tmux.conf: config/tmux/tmux.conf
+    ~/.config/yazi/themes/: config/yazi/themes/**
+    ~/.config/yazi/init.lua: config/yazi/init.lua
+    ~/.config/yazi/keymap.toml: config/yazi/keymap.toml
+    ~/.config/yazi/package.toml: config/yazi/package.toml
+    ~/.config/yazi/theme.toml: config/yazi/theme.toml
+    ~/.config/yazi/yazi.toml: config/yazi/yazi.toml
+    ~/.config/zed/themes/: config/zed/themes/**
+    ~/.config/zed/keymap.json: config/zed/keymap.json
+    ~/.config/zed/settings.json: config/zed/settings.json
+    ~/.local/bin/: bin/**
+    ~/.zprofile: .zprofile
+    ~/.zshenv: .zshenv
+    ~/.zshrc: .zshrc

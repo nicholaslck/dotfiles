@@ -1,5 +1,7 @@
+#!/bin/zsh
+
 # yazi: change the current working directory when exiting Yazi
-function y() {
+y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   command yazi "$@" --cwd-file="$tmp"
   IFS= read -r -d '' cwd <"$tmp"

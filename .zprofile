@@ -27,7 +27,7 @@ export PATH=$HOME/.gem/bin:$PATH
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/Users/nicholaslck/.pnpm"
+export PNPM_HOME="$HOME/.pnpm"
 case ":$PATH:" in
 *":$PNPM_HOME:"*) ;;
 *) export PATH="$PNPM_HOME:$PATH" ;;

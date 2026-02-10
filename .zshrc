@@ -15,8 +15,8 @@ bindkey '^[[B' history-substring-search-down
 fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
 
 # zsh compinit
-source ~/.config/zsh/comps/pnpm_comp.sh
-source ~/.config/zsh/comps/gitleaks_comp.sh
+source ~/dotfiles/scripts/pnpm-comp.sh
+source ~/dotfiles/scripts/gitleaks-comp.sh
 autoload -Uz compinit
 compinit
 
@@ -40,11 +40,10 @@ eval $(thefuck --alias)
 # lazygit alias
 alias lgit="lazygit"
 
-# custom llm caller alias
-alias pplx="~/.config/zsh/scripts/pplx.sh"
-alias update="~/.config/zsh/scripts/update.sh"
-alias brewdump="~/.config/zsh/scripts/brew_dump.sh"
+# just alias
+alias j="just"
 
+# custom llm caller alias
 alias oc="opencode"
 alias kc="kilocode"
 
@@ -52,10 +51,11 @@ alias kc="kilocode"
 eval "$(zoxide init --cmd "cd" zsh)"
 
 # yazi
-source ~/.config/yazi/shell.sh
+source ~/dotfiles/scripts/yazi-shorthand.sh
+source ~/dotfiles/scripts/activate.sh
 
-source ~/.config/zsh/scripts/activate_venv.sh
-
-if [ $TERM_PROGRAM = "ghostty" ]; then
-  source ~/.config/tmux/attach.sh
+if [ "$TERM_PROGRAM" = "ghostty" ] && [ -z "$TMUX" ]; then
+  source ~/dotfiles/scripts/tmux-attach-or-new.sh
 fi
+
+typeset -U PATH path

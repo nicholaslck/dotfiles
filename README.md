@@ -18,8 +18,8 @@ This dotfiles collection includes configurations for:
 Run the installation script:
 
 ```zsh
-git clone https://github.com/nicholaslck/dotfiles.git ~/.config
-~/.config/install.sh
+git clone https://github.com/nicholaslck/dotfiles.git ~/dotfiles
+~/dotfiles/setup.sh
 ```
 
 ## Notes
