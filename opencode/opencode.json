@@ -22,12 +22,12 @@
         "--ws-port",
         "64320"
       ],
-      "enabled": true,
+      "enabled": false,
       "type": "local"
     },
     "chrome-devtools": {
       "command": ["bunx", "chrome-devtools-mcp"],
-      "enabled": true,
+      "enabled": false,
       "type": "local"
     }
   },
