@@ -6,6 +6,5 @@
 pre-commit:
   jobs:
     - name: gitleaks audit
-      tags:
-        - security
+      tags: [security]
       run: gitleaks git --staged
