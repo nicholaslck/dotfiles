@@ -7,6 +7,22 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "minimap": {
+    "show": "never",
+  },
+  "gutter": {
+    "line_numbers": true,
+  },
+  "toolbar": {
+    "code_actions": false,
+    "breadcrumbs": true,
+  },
+  "vim": {
+    "highlight_on_yank_duration": 250,
+    "toggle_relative_line_numbers": false,
+  },
+  "restore_on_startup": "launchpad",
+  "use_system_path_prompts": false,
   "use_system_prompts": false,
   "disable_ai": false,
   "session": {
@@ -17,17 +33,11 @@
     "tree_view": false,
   },
   "agent_servers": {
+    "opencode": {
+      "type": "registry",
+    },
     "gemini": {
       "ignore_system_version": false,
-    },
-    "Open Code": {
-      "type": "custom",
-      "command": "/opt/homebrew/bin/opencode",
-      "args": ["acp"],
-      "env": {},
-      "favorite_models": [],
-      "default_config_options": {},
-      "favorite_config_option_values": {},
     },
   },
   "ssh_connections": [],

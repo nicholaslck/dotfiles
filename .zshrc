@@ -20,6 +20,9 @@ source ~/dotfiles/scripts/gitleaks-comp.sh
 autoload -Uz compinit
 compinit
 
+# zoxide to replace cd
+eval "$(zoxide init --cmd "cd" zsh)"
+
 # Custom aliases
 alias la="ls -a"
 alias ll="ls -lah"
@@ -47,11 +50,10 @@ alias j="just"
 alias oc="opencode"
 alias kc="kilocode"
 
-# zoxide to replace cd
-eval "$(zoxide init --cmd "cd" zsh)"
-
 # yazi
 source ~/dotfiles/scripts/yazi-shorthand.sh
+
+# uv venv
 source ~/dotfiles/scripts/activate.sh
 
 if [ "$TERM_PROGRAM" = "ghostty" ] && [ -z "$TMUX" ]; then
