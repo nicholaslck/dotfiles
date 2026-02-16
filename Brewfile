@@ -1,4 +1,4 @@
-# Exported on 2026-02-14 20:11:49
+# Exported on 2026-02-16 18:34:03
 tap "anomalyco/tap"
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
@@ -15,6 +15,7 @@ brew "ecm"
 brew "fastfetch"
 brew "fd"
 brew "felixkratz/formulae/borders"
+brew "felixkratz/formulae/sketchybar"
 brew "flyctl"
 brew "fzf"
 brew "gawk"
@@ -90,3 +91,4 @@ cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
 cask "zed"
+

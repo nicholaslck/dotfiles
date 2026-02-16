@@ -30,6 +30,7 @@
     ~/.config/nvim/: config/nvim/**
     ~/.config/opencode/opencode.json: config/opencode/opencode.json
     ~/.config/opencode/agents/: config/opencode/agents/**
+    ~/.config/sketchybar/: config/sketchybar/**
     ~/.config/thefuck/settings.py: config/thefuck/settings.py
     ~/.config/thefuck/rules/: config/thefuck/rules/**
     ~/.config/tmux/tmux.conf: config/tmux/tmux.conf

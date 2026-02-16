@@ -56,8 +56,8 @@ source ~/dotfiles/scripts/yazi-shorthand.sh
 # uv venv
 source ~/dotfiles/scripts/activate.sh
 
-if [ "$TERM_PROGRAM" = "ghostty" ] && [ -z "$TMUX" ]; then
-  source ~/dotfiles/scripts/tmux-attach-or-new.sh
-fi
+# if [ "$TERM_PROGRAM" = "ghostty" ] && [ -z "$TMUX" ]; then
+#   source ~/dotfiles/scripts/tmux-attach-or-new.sh
+# fi
 
 typeset -U PATH path
