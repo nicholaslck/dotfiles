@@ -29,3 +29,5 @@ done
 for wid in $LIST_CURRENT; do
   aerospace move-node-to-workspace --window-id "$wid" "$TARGET_WS"
 done
+
+sketchybar --trigger aerospace_windows_change

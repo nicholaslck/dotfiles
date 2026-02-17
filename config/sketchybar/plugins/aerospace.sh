@@ -15,7 +15,9 @@ get_workspace_apps() {
 }
 
 args=()
+
 if [ "$SENDER" = "aerospace_workspace_change" ]; then
+  # change focused workspace
   for sid in "${WORKSPACES[@]}"; do
     if [ "$sid" = "$FOCUSED_WORKSPACE" ]; then
       background_drawing=on
@@ -37,9 +39,8 @@ if [ "$SENDER" = "aerospace_workspace_change" ]; then
       label.color=$label_color
     )
   done
-  sketchybar "${args[@]}"
 
-elif [ "$SENDER" = "space_windows_change" ]; then
+elif [ "$SENDER" = "space_windows_change" || "$SENDER" = "aerospace_windows_change" ]; then
   # new window added or deleted
   get_workspace_apps
 
@@ -51,7 +52,7 @@ elif [ "$SENDER" = "space_windows_change" ]; then
       label="$label"
     )
   done
-  sketchybar "${args[@]}"
+
 else
   # initialization
   FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused)
