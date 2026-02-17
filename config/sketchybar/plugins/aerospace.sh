@@ -1,27 +1,58 @@
 #!/bin/bash
 
-# make sure it's executable with:
-# chmod +x ~/.config/sketchybar/plugins/aerospace.sh
+source $CONFIG_DIR/constants.sh
+
+WORKSPACES=("1" "2" "3" "4" "5" "6" "7" "8" "9")
+
 if [ -z "$FOCUSED_WORKSPACE" ]; then
   FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused)
 fi
 
-if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
-  BACKGROUND_DRAWING=on
-else
-  BACKGROUND_DRAWING=off
-fi
+##### Get all active workspaces #####
+# active_workspaces=$(aerospace list-workspaces --all)
 
-# read all apps name in workspace
-app_names=()
-while IFS= read -r line; do
-  app_names+=("$line")
-done < <(aerospace list-windows --workspace $1 --format "%{app-name}")
+##### Get all app names #####
+workspace_apps=()
+while IFS='-' read -r workspace app; do
+  if [[ -n "${workspace_apps[$workspace]}" ]]; then
+    workspace_apps[$workspace]+=" / $app"
+  else
+    workspace_apps[$workspace]="$app"
+  fi
+done < <(aerospace list-windows --all --format "%{workspace}-%{app-name}")
 
-# concat app_names with comma separator
-printf -v label_app_names "%s/" "${app_names[@]}"
-label_app_names="${label_app_names%/}"
+##### Re-draw each items #####
+args=()
+for sid in "${WORKSPACES[@]}"; do
 
-sketchybar --set $NAME \
-  background.drawing=$BACKGROUND_DRAWING \
-  label="$1: $label_app_names"
+  app_names=${workspace_apps[$sid]}
+  background_color=$COLOR_BACKGROUND_ACTIVE
+
+  background_drawing=off
+  icon_color=$COLOR_FOREGROUND_SECONDARY
+  label_color=$COLOR_FOREGROUND_SECONDARY
+
+  icon="$sid:"
+  label="$app_names"
+
+  if [ "$sid" = "$FOCUSED_WORKSPACE" ]; then
+    background_drawing=on
+    icon_color=$COLOR_FOREGROUND_PRIMARY
+    label_color=$COLOR_FOREGROUND_PRIMARY
+  elif [ "$sid" = "$PREV_WORKSPACE" ]; then
+    icon_color=$COLOR_FOREGROUND_PRIMARY
+    label_color=$COLOR_FOREGROUND_PRIMARY
+  fi
+
+  args+=(
+    --set "space.$sid"
+    background.color=$background_color
+    background.drawing=$background_drawing
+    icon.color=$icon_color
+    label.color=$label_color
+    icon="$icon"
+    label="$label"
+  )
+done
+
+sketchybar "${args[@]}"

@@ -5,9 +5,7 @@
 # https://github.com/FelixKratz/dotfiles
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
-
-# Enable hot reload, only uncomment this line if you are developing
-sketchybar --hotload true
+source $CONFIG_DIR/constants.sh
 
 ##### Bar Appearance #####
 # Configuring the general appearance of the bar.
@@ -16,7 +14,7 @@ sketchybar --hotload true
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar position=bottom height=20 blur_radius=30 color=0x40000000
+sketchybar --bar position=bottom height=28 color=0xff020618 topmost=on notch_width=0
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
@@ -26,12 +24,18 @@ sketchybar --bar position=bottom height=20 blur_radius=30 color=0x40000000
 default=(
   padding_left=8
   padding_right=8
-  icon.font="Hack Nerd Font:Bold:17.0"
-  label.font="Hack Nerd Font:Bold:14.0"
-  icon.color=0xffffffff
-  label.color=0xffffffff
-  label.padding_left=8
-  label.padding_right=8
+  icon.font="FiraCode Nerd Font:Retina:14.0"
+  label.font="FiraCode Nerd Font:Retina:14.0"
+  icon.color=0xffcad5e2
+  label.color=0xffcad5e2
+  background.height=28
+  background.padding_left=0
+  background.padding_right=0
+  icon.padding_left=16
+  icon.padding_right=4
+  label.padding_left=0
+  label.padding_right=16
+  icon.background.height=28
 )
 sketchybar --default "${default[@]}"
 
@@ -60,32 +64,26 @@ sketchybar --default "${default[@]}"
 # done
 
 ##### Adding Aerospace workspace Indicators #####
+sketchybar \
+  --add event aerospace_workspace_change \
+  --add event aerospace_windows_change
+
 WORKSPACES=("1" "2" "3" "4" "5" "6" "7" "8" "9")
-sketchybar --add event aerospace_workspace_change
+SPACE_IDS=()
 
-for i in "${!WORKSPACES[@]}"; do
-  sid="$(($i + 1))"
-
-  # read all apps name in workspace
-  app_names=()
-  while IFS= read -r line; do
-    app_names+=("$line")
-  done < <(aerospace list-windows --workspace $sid --format "%{app-name}")
-
-  # concat app_names with comma separator
-  printf -v label_app_names "%s/" "${app_names[@]}"
-  label_app_names="${label_app_names%/}"
-
-  sketchybar --add item space.$sid left \
-    --subscribe space.$sid aerospace_workspace_change \
+for sid in "${WORKSPACES[@]}"; do
+  SPACE_IDS+=("space.$sid")
+  sketchybar \
+    --add item space.$sid left \
     --set space.$sid \
-    background.color=0x44ffffff \
-    background.height=20 \
-    background.drawing=off \
-    label="$sid: $label_app_names" \
-    click_script="aerospace workspace $sid" \
-    script="$PLUGIN_DIR/aerospace.sh $sid"
+    click_script="aerospace workspace $sid"
 done
+
+sketchybar --add bracket spaces "${SPACE_IDS[@]}" \
+  --set spaces \
+  script="$PLUGIN_DIR/aerospace.sh" \
+  --subscribe spaces aerospace_workspace_change \
+  --subscribe spaces aerospace_windows_change
 
 ##### Adding Left Items #####
 # We add some regular items to the left side of the bar, where
