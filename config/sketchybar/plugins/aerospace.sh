@@ -20,23 +20,23 @@ if [ "$SENDER" = "aerospace_workspace_change" ]; then
   # change focused workspace
   for sid in "${WORKSPACES[@]}"; do
     if [ "$sid" = "$FOCUSED_WORKSPACE" ]; then
-      background_drawing=on
-      icon_color=$COLOR_FOREGROUND_PRIMARY
-      label_color=$COLOR_FOREGROUND_PRIMARY
+      icon_color=$COLOR_ROSEWATER
+      label_color=$COLOR_ROSEWATER
+      icon=" $sid:"
     elif [ "$sid" = "$PREV_WORKSPACE" ]; then
-      background_drawing=off
-      icon_color=$COLOR_FOREGROUND_PRIMARY
-      label_color=$COLOR_FOREGROUND_PRIMARY
+      icon_color=$COLOR_TEXT
+      label_color=$COLOR_TEXT
+      icon="$sid:"
     else
-      background_drawing=off
-      icon_color=$COLOR_FOREGROUND_SECONDARY
-      label_color=$COLOR_FOREGROUND_SECONDARY
+      icon_color=$COLOR_OVERLAY_1
+      label_color=$COLOR_OVERLAY_1
+      icon="$sid:"
     fi
     args+=(
       --set "space.$sid"
-      background.drawing=$background_drawing
       icon.color=$icon_color
       label.color=$label_color
+      icon="$icon"
     )
   done
 
@@ -60,25 +60,21 @@ else
 
   for sid in "${WORKSPACES[@]}"; do
 
-    app_names="${workspace_apps[$sid]:-}"
-    icon="$sid:"
-    label="$app_names"
-
-    background_color=$COLOR_BACKGROUND_ACTIVE
-    background_drawing=off
-    icon_color=$COLOR_FOREGROUND_SECONDARY
-    label_color=$COLOR_FOREGROUND_SECONDARY
-
     if [ "$sid" = "$FOCUSED_WORKSPACE" ]; then
-      background_drawing=on
-      icon_color=$COLOR_FOREGROUND_PRIMARY
-      label_color=$COLOR_FOREGROUND_PRIMARY
+      icon_color=$COLOR_ROSEWATER
+      label_color=$COLOR_ROSEWATER
+      icon=" $sid:"
+    else
+      icon_color=$COLOR_OVERLAY_1
+      label_color=$COLOR_OVERLAY_1
+      icon="$sid:"
     fi
+
+    app_names="${workspace_apps[$sid]:-}"
+    label="$app_names"
 
     args+=(
       --set "space.$sid"
-      background.color=$background_color
-      background.drawing=$background_drawing
       icon.color=$icon_color
       label.color=$label_color
       icon="$icon"
