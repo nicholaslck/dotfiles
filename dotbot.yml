@@ -7,16 +7,15 @@
 
 - clean:
     - "~"
-    - ~/.config
-    - ~/.local/bin
+    - ~/.config/**
+    - ~/.local/bin/**
 
 - create:
     - ~/projects
     - ~/temp
 
 - link:
-    ~/.config/aerospace/aerospace.toml: config/aerospace/aerospace.toml
-    ~/.config/aerospace/swap-current-workspace-to-workspace.sh: config/aerospace/swap-current-workspace-to-workspace.sh
+    ~/.config/aerospace/: config/aerospace/**
     ~/.config/borders/bordersrc: config/borders/bordersrc
     ~/.config/btop/themes/: config/btop/themes/**
     ~/.config/btop/btop.conf: config/btop/btop.conf
