@@ -9,6 +9,7 @@ This dotfiles collection includes configurations for:
 - **Terminal**: Ghostty terminal emulator with Catppuccin themes
 - **Editor**: Neovim with Kickstart configuration
 - **Window Management**: Aerospace tiling window manager
+- **Custom Status Bar**: Sketchybar with Catppuccin themes integrated with Aerospace
 - **System Utilities**: btop system monitor, Borders, TheFuck
 - **IDEs**: Zed editor settings
 - **And more**: Various other tools and applications
