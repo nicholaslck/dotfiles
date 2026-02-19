@@ -1,4 +1,4 @@
-# Exported on 2026-02-16 18:34:03
+# Exported on 2026-02-19 16:35:10
 tap "anomalyco/tap"
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
@@ -47,6 +47,7 @@ brew "ruby"
 brew "sevenzip"
 brew "shfmt"
 brew "supabase/tap/supabase"
+brew "tesseract"
 brew "thefuck"
 brew "tlrc"
 brew "tmux"
