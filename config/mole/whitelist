@@ -1,0 +1,16 @@
+# Mole Whitelist - Protected paths won't be deleted
+# Default protections: Playwright browsers, HuggingFace models, Maven repo, Ollama models, Surge Mac, R renv, Finder metadata
+# Add one pattern per line to keep items safe.
+
+FINDER_METADATA
+/Users/nicholaslck/.cache/huggingface*
+/Users/nicholaslck/Library/Caches/pypoetry/virtualenvs*
+/Users/nicholaslck/Library/Caches/JetBrains*
+/Users/nicholaslck/Library/Caches/com.jetbrains.toolbox*
+/Users/nicholaslck/Library/Application Support/JetBrains*
+/Users/nicholaslck/Library/Caches/com.apple.finder
+/Users/nicholaslck/Library/Mobile Documents*
+/Users/nicholaslck/Library/Caches/com.apple.FontRegistry*
+/Users/nicholaslck/Library/Caches/com.apple.spotlight*
+/Users/nicholaslck/Library/Caches/com.apple.Spotlight*
+/Users/nicholaslck/Library/Caches/CloudKit*

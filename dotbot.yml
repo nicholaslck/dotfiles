@@ -26,6 +26,8 @@
     ~/.config/ghostty/config: config/ghostty/config
     ~/.config/homebrew/brew.env: config/homebrew/brew.env
     ~/.config/lazygit/config.yml: config/lazygit/config.yml
+    ~/.config/mole/whitelist: config/mole/whitelist
+    ~/.config/mole/whitelist_optimize: config/mole/whitelist_optimize
     ~/.config/nvim/: config/nvim/**
     ~/.config/opencode/opencode.json: config/opencode/opencode.json
     ~/.config/opencode/agents/: config/opencode/agents/**

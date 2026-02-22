@@ -1,0 +1,3 @@
+# Mole Optimization Whitelist - These checks will be skipped during optimization
+
+check_touchid
