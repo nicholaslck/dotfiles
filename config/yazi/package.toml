@@ -1,22 +1,22 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "25918dc"
+rev = "b224ddf"
 hash = "6fa6a05a81c98dd000fbca3cca6e9682"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "25918dc"
-hash = "9ad20d763df07ce40fd09de549d914b0"
+rev = "b224ddf"
+hash = "91937a4a9b779eabc6983e258befdfe9"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "25918dc"
+rev = "b224ddf"
 hash = "270915fa8282a19908449530ff66f7e2"
 
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "8ab04b2"
-hash = "bdd196f71aa3e6aa02d1b1d6cad22424"
+rev = "20ecff6"
+hash = "ad48b4d2fd8f429ce87b0fddf7f34c9"
 
 [flavor]
 deps = []

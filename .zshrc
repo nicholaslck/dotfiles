@@ -13,6 +13,7 @@ bindkey '^[[B' history-substring-search-down
 
 # zsh completions
 fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
+fpath=("/Users/nicholaslck/.zsh/completions" $fpath)
 
 # zsh compinit
 source ~/dotfiles/scripts/pnpm-comp.sh

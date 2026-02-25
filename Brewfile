@@ -1,4 +1,4 @@
-# Exported on 2026-02-19 16:35:10
+# Exported on 2026-02-25 22:24:00
 tap "anomalyco/tap"
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
@@ -32,6 +32,7 @@ brew "lazygit"
 brew "lefthook"
 brew "llm"
 brew "media-info"
+brew "mole"
 brew "neovim"
 brew "node"
 brew "onefetch"
@@ -89,7 +90,7 @@ cask "signal"
 cask "stats"
 cask "telegram"
 cask "visual-studio-code"
+cask "vivaldi"
 cask "vlc"
 cask "whatsapp"
 cask "zed"
-
