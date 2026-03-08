@@ -1,4 +1,4 @@
-# Exported on 2026-03-08 14:31:40
+# Exported on 2026-03-08 15:30:33
 tap "anomalyco/tap"
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
@@ -6,6 +6,7 @@ tap "oven-sh/bun"
 tap "supabase/tap"
 
 brew "anomalyco/tap/opencode"
+brew "bat"
 brew "btop"
 brew "caddy"
 brew "codeberg-cli"
@@ -20,6 +21,7 @@ brew "flyctl"
 brew "fzf"
 brew "gawk"
 brew "gh"
+brew "git-delta"
 brew "gitleaks"
 brew "glow"
 brew "go"

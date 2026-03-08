@@ -23,6 +23,6 @@
 - link:
     ~/.config/: config/**
     ~/.local/bin/: bin/**
-    ~/.zprofile: .zprofile
-    ~/.zshenv: .zshenv
-    ~/.zshrc: .zshrc
+    ~/.zprofile: zprofile
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc

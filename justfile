@@ -2,7 +2,7 @@ export XDG_CONFIG_HOME := prepend(env('HOME'), "/.config")
 export TPM_DIR := prepend(env('HOME'), "/.config/tmux/plugins/tpm")
 
 link:
-    dotbot -c dotbot.yml -v
+    dotbot -c dotbot.yml
 
 push:
     git push
@@ -59,17 +59,21 @@ save_brew:
 [group('save')]
 save_config CONFIG_FILE:
     #!/bin/zsh
-    # first, replace the absolute path prefix to ~/.config
-    # then, move the file into dotfiles/ with the identical folder structure
-    # add the link into dotbot.yml
     SOURCE_ABS_PATH={{ absolute_path(CONFIG_FILE) }}
     SOURCE_ABS_PATH_WITH_HOMETAIL="{{ replace(absolute_path(CONFIG_FILE), XDG_CONFIG_HOME, "~/.config") }}"
     DEST_REL_PATH_IN_DOTFILES="{{ replace(absolute_path(CONFIG_FILE), XDG_CONFIG_HOME, "config") }}"
+
+    # check if SOURCE_ABS_PATH is within XDG_CONFIG_HOME
+    if [[ $SOURCE_ABS_PATH != $XDG_CONFIG_HOME/* ]]; then
+        echo "Error: CONFIG_FILE ($SOURCE_ABS_PATH) is not within XDG_CONFIG_HOME ($XDG_CONFIG_HOME)"
+        exit 1
+    fi
 
     # check if source file exists
     if test ! -f $SOURCE_ABS_PATH; then
         echo "Source file not found: $SOURCE_ABS_PATH"
         exit 1
     fi
+
     mv $SOURCE_ABS_PATH $DEST_REL_PATH_IN_DOTFILES
     just link
