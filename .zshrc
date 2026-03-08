@@ -18,6 +18,7 @@ fpath=("/Users/nicholaslck/.zsh/completions" $fpath)
 # zsh compinit
 source ~/dotfiles/scripts/pnpm-comp.sh
 source ~/dotfiles/scripts/gitleaks-comp.sh
+eval "$(op completion zsh)"; compdef _op op
 autoload -Uz compinit
 compinit
 

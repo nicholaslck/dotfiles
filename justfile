@@ -7,6 +7,11 @@ link:
 push:
     git push
 
+install: brew_install link yazi_install tmux_install
+
+[parallel]
+update: zap_update brew_update yazi_update tmux_update
+
 [group('install')]
 brew_install:
     brew bundle install --file ./Brewfile
@@ -22,13 +27,6 @@ tmux_install:
       git clone https://github.com/tmux-plugins/tpm $TPM_DIR
     fi
     $TPM_DIR/bin/install_plugins
-
-install: brew_install link yazi_install tmux_install
-
-[group('sync')]
-brew_sync:
-    scripts/brew-dump.sh .
-    git add ./Brewfile
 
 [group('update')]
 zap_update:
@@ -51,5 +49,27 @@ tmux_update:
     [ -d $TPM_DIR ] && git -C $TPM_DIR pull
     $TPM_DIR/bin/update_plugins all
 
-[parallel]
-update: zap_update brew_update yazi_update tmux_update
+# Export and save Brewfile
+[group('save')]
+save_brew:
+    scripts/brew-dump.sh .
+    git add ./Brewfile
+
+# Move the source config file into dotfiles/ and create a symlink back
+[group('save')]
+save_config CONFIG_FILE:
+    #!/bin/zsh
+    # first, replace the absolute path prefix to ~/.config
+    # then, move the file into dotfiles/ with the identical folder structure
+    # add the link into dotbot.yml
+    SOURCE_ABS_PATH={{ absolute_path(CONFIG_FILE) }}
+    SOURCE_ABS_PATH_WITH_HOMETAIL="{{ replace(absolute_path(CONFIG_FILE), XDG_CONFIG_HOME, "~/.config") }}"
+    DEST_REL_PATH_IN_DOTFILES="{{ replace(absolute_path(CONFIG_FILE), XDG_CONFIG_HOME, "config") }}"
+
+    # check if source file exists
+    if test ! -f $SOURCE_ABS_PATH; then
+        echo "Source file not found: $SOURCE_ABS_PATH"
+        exit 1
+    fi
+    mv $SOURCE_ABS_PATH $DEST_REL_PATH_IN_DOTFILES
+    just link

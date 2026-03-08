@@ -94,9 +94,25 @@
       "formatter": {
         "external": {
           "command": "shfmt",
-          // Change `--indent 2` to match your preferred tab_size
+          // Change `--indent 2` to match your preferred `tab_size`
           "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
         },
+      },
+    },
+    "TypeScript": {
+      "language_servers": ["typescript-language-server", "!vtsls", "..."],
+    },
+    "TSX": {
+      "language_servers": ["typescript-language-server", "!vtsls", "..."],
+    },
+    "JavaScript": {
+      "language_servers": ["typescript-language-server", "!vtsls", "..."],
+    },
+  },
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true,
       },
     },
   },

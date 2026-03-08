@@ -27,7 +27,6 @@ echo "" >>$BREWFILE
 # export casks
 echo "fetching casks"
 brew list --casks | xargs -I {} echo "cask \"{}\"" >>$BREWFILE
-echo "" >>$BREWFILE
 
 echo "Brew bundle completed. Please review the file at $BREWFILE"
 echo ""

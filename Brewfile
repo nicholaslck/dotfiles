@@ -1,4 +1,4 @@
-# Exported on 2026-02-25 22:24:00
+# Exported on 2026-03-08 14:31:40
 tap "anomalyco/tap"
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
@@ -46,6 +46,7 @@ brew "qt@5"
 brew "resvg"
 brew "ruby"
 brew "sevenzip"
+brew "shellcheck"
 brew "shfmt"
 brew "supabase/tap/supabase"
 brew "tesseract"
@@ -64,6 +65,7 @@ brew "yt-dlp"
 brew "zoxide"
 
 cask "1password"
+cask "1password-cli"
 cask "aerospace"
 cask "android-studio"
 cask "antigravity"
