@@ -15,8 +15,8 @@ hash = "26db011a778f261d730d4f5f8bf24b3f"
 
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
-rev = "20ecff6"
-hash = "ad48b4d2fd8f429ce87b0fddf7f34c9"
+rev = "f8b24e2"
+hash = "ed77480d1d176802a79bef914ff30dff"
 
 [flavor]
 deps = []

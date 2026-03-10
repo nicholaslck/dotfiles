@@ -30,7 +30,7 @@
   },
   "base_keymap": "VSCode",
   "git_panel": {
-    "tree_view": false,
+    "tree_view": true,
   },
   "agent_servers": {
     "opencode": {
@@ -66,14 +66,14 @@
   },
   "agent": {
     "profiles": {},
-    "default_profile": "ask",
+    "default_profile": "write",
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "gpt-5-mini",
     },
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini",
+      "model": "claude-sonnet-4.6",
     },
   },
   "ui_font_size": 15.0,
