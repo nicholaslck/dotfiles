@@ -26,8 +26,7 @@ compinit
 eval "$(zoxide init --cmd "cd" zsh)"
 
 # Custom aliases
-alias la="ls -a"
-alias ll="ls -lah"
+
 alias c="clear"
 alias reboot="sudo /sbin/reboot"
 alias shutdown="sudo /sbin/shutdown -h now"
@@ -52,14 +51,20 @@ alias j="just"
 alias oc="opencode"
 alias kc="kilocode"
 
+alias ls="eza"
+alias lsa="eza -a"
+alias ll="eza -lah"
+alias lt="eza -T -L=2"
+alias lta="eza -T -L=2 -a"
+
 # yazi
 source ~/dotfiles/scripts/yazi-shorthand.sh
 
 # uv venv
 source ~/dotfiles/scripts/activate.sh
 
-# if [ "$TERM_PROGRAM" = "ghostty" ] && [ -z "$TMUX" ]; then
-#   source ~/dotfiles/scripts/tmux-attach-or-new.sh
-# fi
+if [ "$TERM_PROGRAM" = "ghostty" ] && [ -z "$TMUX" ]; then
+  tmux has-session && exec tmux attach || exec tmux
+fi
 
 typeset -U PATH path

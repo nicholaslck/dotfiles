@@ -19,6 +19,9 @@ export PATH="$HOME/.lmstudio/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/lib/ruby/gems/4.0.0/bin:$PATH"
 
+# python (via homebrew)
+export PATH="$HOMEBREW_PREFIX/opt/python@3.14/libexec/bin:$PATH"
+
 # Ruby Gems (mostly for Cocoapods)
 export GEM_HOME=$HOME/.gem
 export PATH=$HOME/.gem/bin:$PATH
@@ -47,3 +50,8 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 # Added by Obsidian
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
+
+# Setting PATH for Python 3.13
+# The original version is saved in .zprofile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.13/bin:${PATH}"
+export PATH
