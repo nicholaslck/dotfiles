@@ -1,42 +1,50 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "opencode/kimi-k2.5-free",
+  "model": "github-copilot/claude-sonnet-4.6",
   "mcp": {
     "blender": {
       "enabled": false,
       "type": "local",
-      "command": ["uvx", "blender-mcp"]
+      "command": ["uvx", "blender-mcp"],
     },
     "context7": {
-      "enabled": true,
+      "enabled": false,
       "type": "remote",
-      "url": "https://mcp.context7.com/mcp/oauth"
+      "url": "https://mcp.context7.com/mcp/oauth",
     },
     "linear": {
       "enabled": true,
       "type": "remote",
-      "url": "https://mcp.linear.app/mcp"
+      "url": "https://mcp.linear.app/mcp",
     },
     "pencil": {
       "command": [
         "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
         "--ws-port",
-        "64320"
+        "64320",
       ],
       "enabled": false,
-      "type": "local"
+      "type": "local",
     },
     "chrome-devtools": {
       "command": ["bunx", "chrome-devtools-mcp"],
       "enabled": false,
-      "type": "local"
-    }
+      "type": "local",
+    },
   },
   "permission": {
     "bash": {
       "rm *": "ask",
       "git *": "allow",
-      "git push *": "ask"
-    }
-  }
+      "git push *": "ask",
+    },
+  },
+  "agent": {
+    "plan": {
+      "model": "github-copilot/claude-opus-4.6",
+    },
+    "build": {
+      "model": "github-copilot/claude-sonnet-4.6",
+    },
+  },
 }
