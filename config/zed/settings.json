@@ -33,11 +33,11 @@
     "tree_view": true,
   },
   "agent_servers": {
+    "gemini": {
+      "type": "registry"
+    },
     "opencode": {
       "type": "registry",
-    },
-    "gemini": {
-      "ignore_system_version": false,
     },
   },
   "ssh_connections": [],

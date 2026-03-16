@@ -51,7 +51,6 @@ source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 # Added by Obsidian
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
 
-# Setting PATH for Python 3.13
-# The original version is saved in .zprofile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.13/bin:${PATH}"
-export PATH
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/nicholaslck/.lmstudio/bin"
+# End of LM Studio CLI section
