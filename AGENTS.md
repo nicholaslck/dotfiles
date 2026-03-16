@@ -26,4 +26,4 @@ The symlink mapping can be referred to file `dotbot.yml`
 
 ## How to change certain files
 
-- `Brewfile`: instead of manaully update or modify this file, we only use `just brew_sync` to dump the current Brew bundle to `Brewfile`
+- `Brewfile`: instead of manaully update or modify this file, we only use `just save_brew` to dump the current Brew bundle to `Brewfile`
