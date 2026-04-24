@@ -84,7 +84,7 @@ inner.horizontal = 0
 inner.vertical = 0
 outer.left = 2
 outer.right = 2
-outer.top = 4
+outer.top = 2
 outer.bottom = 24 # offset for sketchybar
 
 # 'main' binding mode declaration
