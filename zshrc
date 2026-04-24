@@ -63,8 +63,8 @@ source ~/dotfiles/scripts/yazi-shorthand.sh
 # uv venv
 source ~/dotfiles/scripts/activate.sh
 
-if [ "$TERM_PROGRAM" = "ghostty" ] && [ -z "$TMUX" ]; then
-  tmux has-session && exec tmux attach || exec tmux
-fi
+# if [ "$TERM_PROGRAM" = "ghostty" ] && [ -z "$TMUX" ]; then
+#   tmux has-session && exec tmux attach || exec tmux
+# fi
 
 typeset -U PATH path

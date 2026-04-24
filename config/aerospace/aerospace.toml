@@ -80,12 +80,12 @@ preset = 'qwerty'
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 4
-inner.vertical = 4
-outer.left = 4
-outer.bottom = 26
+inner.horizontal = 0
+inner.vertical = 0
+outer.left = 2
+outer.right = 2
 outer.top = 4
-outer.right = 4
+outer.bottom = 24 # offset for sketchybar
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -209,7 +209,11 @@ alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9', 'exec-and-forget sketc
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-backtick = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-alt-shift-backtick = 'move-workspace-to-monitor --wrap-around next'
+# alt-shift-backtick = 'move-workspace-to-monitor --wrap-around next'
+ctrl-alt-cmd-up = 'move-workspace-to-monitor --wrap-around up'
+ctrl-alt-cmd-down = 'move-workspace-to-monitor --wrap-around down'
+ctrl-alt-cmd-left = 'move-workspace-to-monitor --wrap-around left'
+ctrl-alt-cmd-right = 'move-workspace-to-monitor --wrap-around right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'

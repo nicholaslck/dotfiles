@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
   "minimap": {
     "show": "never",
   },
@@ -30,6 +39,7 @@
   },
   "base_keymap": "VSCode",
   "git_panel": {
+    "dock": "left",
     "tree_view": true,
   },
   "agent_servers": {
@@ -55,9 +65,10 @@
   "vim_mode": false,
   "context_servers": {},
   "edit_predictions": {
-    "provider": "zed",
+    "provider": "copilot",
     "mode": "subtle",
     "copilot": {
+      "enable_next_edit_suggestions": true,
       "proxy": null,
       "proxy_no_verify": null,
       "enterprise_uri": null,
@@ -65,6 +76,7 @@
     "enabled_in_text_threads": false,
   },
   "agent": {
+    "dock": "right",
     "profiles": {},
     "default_profile": "write",
     "inline_assistant_model": {

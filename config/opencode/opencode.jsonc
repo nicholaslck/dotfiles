@@ -20,10 +20,10 @@
     "pencil": {
       "command": [
         "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
-        "--ws-port",
-        "64320",
+        "--app",
+        "desktop",
       ],
-      "enabled": false,
+      "enabled": true,
       "type": "local",
     },
     "chrome-devtools": {
