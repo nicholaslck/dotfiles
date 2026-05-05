@@ -29,7 +29,7 @@ APP_AEROSPACE="/Applications/AeroSpace.app"
 
 # config git to load catppuccin theme for delta
 echo "[include]" >> $HOME/.gitconfig
-echo "    path = ~/.config/delta/config" >> $HOME/.gitconfig
+echo "\tpath = ~/.config/delta/config" >> $HOME/.gitconfig
 
 
 echo ""
