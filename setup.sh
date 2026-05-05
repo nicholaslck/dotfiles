@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
+
 # install zsh-zap
 if [ ! -d "$ZAP_DIR" ]; then
   zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
@@ -11,13 +13,16 @@ if ! command -v brew &>/dev/null; then
   eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 fi
 
-# install just
-brew install just
-
-## install rust
+# install rust
 curl https://sh.rustup.rs -sSf | sh
 
-just install
+# brew install formulas and casks
+$SCRIPT_DIR/install-formulas.sh
+$SCRIPT_DIR/install-casks.sh
+
+just link
+just yazi_install
+just tmux_install
 
 # start background services
 brew services start borders
@@ -28,9 +33,8 @@ APP_AEROSPACE="/Applications/AeroSpace.app"
 [ -d $APP_AEROSPACE ] && open $APP_AEROSPACE
 
 # config git to load catppuccin theme for delta
-echo "[include]" >> $HOME/.gitconfig
-echo "\tpath = ~/.config/delta/config" >> $HOME/.gitconfig
-
+echo "[include]" >>$HOME/.gitconfig
+echo "\tpath = ~/.config/delta/config" >>$HOME/.gitconfig
 
 echo ""
 echo "Setup done."

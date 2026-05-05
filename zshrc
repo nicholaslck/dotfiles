@@ -18,7 +18,8 @@ fpath=("/Users/nicholaslck/.zsh/completions" $fpath)
 # zsh compinit
 source ~/dotfiles/scripts/pnpm-comp.sh
 source ~/dotfiles/scripts/gitleaks-comp.sh
-eval "$(op completion zsh)"; compdef _op op
+eval "$(op completion zsh)"
+compdef _op op
 autoload -Uz compinit
 compinit
 
@@ -26,7 +27,6 @@ compinit
 eval "$(zoxide init --cmd "cd" zsh)"
 
 # Custom aliases
-
 alias c="clear"
 alias reboot="sudo /sbin/reboot"
 alias shutdown="sudo /sbin/shutdown -h now"
