@@ -9,9 +9,6 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
 # flutter
 export PATH="$HOME/development/flutter/bin:$PATH"
 
-# rust
-. "$HOME/.cargo/env"
-
 # Added by LM Studio CLI (lms)
 export PATH="$HOME/.lmstudio/bin:$PATH"
 

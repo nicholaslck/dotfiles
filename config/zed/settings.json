@@ -8,13 +8,13 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "minimap": {
     "show": "never",
@@ -44,7 +44,7 @@
   },
   "agent_servers": {
     "gemini": {
-      "type": "registry"
+      "type": "registry",
     },
     "opencode": {
       "type": "registry",
@@ -56,7 +56,7 @@
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha",
   },
-  "agent_ui_font_size": 15.0,
+  "agent_ui_font_size": 16.0,
   "buffer_line_height": "comfortable",
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_weight": 400.0,
@@ -73,7 +73,6 @@
       "proxy_no_verify": null,
       "enterprise_uri": null,
     },
-    "enabled_in_text_threads": false,
   },
   "agent": {
     "dock": "right",
@@ -88,7 +87,7 @@
       "model": "claude-sonnet-4.6",
     },
   },
-  "ui_font_size": 15.0,
+  "ui_font_size": 16.0,
   "buffer_font_size": 12.0,
   "theme": {
     "mode": "system",

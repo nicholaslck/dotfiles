@@ -14,6 +14,25 @@ fi
 # install just
 brew install just
 
+## install rust
+curl https://sh.rustup.rs -sSf | sh
+
 just install
 
-echo "\nSetup Done. Please restart your terminal."
+# start background services
+brew services start borders
+brew services start sketchybar
+
+# start AeroSpace immediately
+APP_AEROSPACE="/Applications/AeroSpace.app"
+[ -d $APP_AEROSPACE ] && open $APP_AEROSPACE
+
+# config git to load catppuccin theme for delta
+echo "[include]" >> $HOME/.gitconfig
+echo "    path = ~/.config/delta/config" >> $HOME/.gitconfig
+
+
+echo ""
+echo "Setup done."
+echo "Remember to reload Ghostty config by pressing [ Shift + Cmd + , ] in Ghostty."
+echo "Please restart your computer."

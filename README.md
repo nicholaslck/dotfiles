@@ -37,6 +37,6 @@ This project uses the following tools for management:
 - Some applications may need to be restarted or reloaded after installation
 - Individual tool configurations may have their own dependencies
 - The configurations are tailored to my personal workflow and preferences
-- The accent color of Catppuccin is **Rosewater**
+- The theme/accent color of Catppuccin is **Mocha/Rosewater**
 
 Feel free to adapt these configurations to suit your own needs!
