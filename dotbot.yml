@@ -18,7 +18,6 @@
 
 - create:
     - ~/projects
-    - ~/projects-tmp
 
 - link:
     ~/.config/: config/**
