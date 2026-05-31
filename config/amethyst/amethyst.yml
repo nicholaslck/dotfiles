@@ -1,0 +1,22 @@
+layouts:
+   - tall
+   - wide
+   - column
+   - middle-wide
+   - fullscreen
+   - bsp
+
+mod1:
+   - control
+   - option
+
+mod2:
+   - control
+   - option
+   - command
+
+mouse-follows-focus: true
+
+mouse-swaps-windows: true
+
+mouse-resizes-windows: true
