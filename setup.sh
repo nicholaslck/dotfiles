@@ -25,12 +25,12 @@ just yazi_install
 just tmux_install
 
 # start background services
-brew services start borders
-brew services start sketchybar
+# brew services start borders
+# brew services start sketchybar
 
 # start AeroSpace immediately
-APP_AEROSPACE="/Applications/AeroSpace.app"
-[ -d $APP_AEROSPACE ] && open $APP_AEROSPACE
+# APP_AEROSPACE="/Applications/AeroSpace.app"
+# [ -d $APP_AEROSPACE ] && open $APP_AEROSPACE
 
 # config git to load catppuccin theme for delta
 echo "[include]" >>$HOME/.gitconfig
