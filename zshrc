@@ -1,3 +1,4 @@
+# shellcheck source=/dev/null
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 plug "Aloxaf/fzf-tab"
@@ -12,13 +13,14 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # zsh completions
-fpath=($HOMEBREW_PREFIX/share/zsh/site-functions $fpath)
-fpath=("/Users/nicholaslck/.zsh/completions" $fpath)
+fpath=("$HOMEBREW_PREFIX/share/zsh/site-functions" "${fpath[@]}")
+fpath=("/Users/nicholaslck/.zsh/completions" "${fpath[@]}")
 
 # zsh compinit
 source ~/dotfiles/scripts/pnpm-comp.sh
 source ~/dotfiles/scripts/gitleaks-comp.sh
 eval "$(op completion zsh)"
+eval "$(opencode completion)"
 compdef _op op
 autoload -Uz compinit
 compinit
@@ -38,9 +40,6 @@ alias vi="nvim"
 export EDITOR=nvim
 export VISUAL=nvim
 
-# thefuck alias
-eval $(thefuck --alias)
-
 # lazygit alias
 alias lgit="lazygit"
 
@@ -58,13 +57,10 @@ alias lt="eza -T -L=2"
 alias lta="eza -T -L=2 -a"
 
 # yazi
-source ~/dotfiles/scripts/yazi-shorthand.sh
+source "$HOME/dotfiles/scripts/yazi-shorthand.sh"
 
 # uv venv
-source ~/dotfiles/scripts/activate.sh
+source "$HOME/dotfiles/scripts/activate.sh"
 
-# if [ "$TERM_PROGRAM" = "ghostty" ] && [ -z "$TMUX" ]; then
-#   tmux has-session && exec tmux attach || exec tmux
-# fi
-
+# shellcheck disable=SC2034
 typeset -U PATH path
