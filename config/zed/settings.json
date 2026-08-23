@@ -48,6 +48,10 @@
       "type": "registry",
     },
     "opencode": {
+      "default_config_options": {
+        "effort": "high",
+        "model": "opencode/deepseek-v4-flash-free"
+      },
       "type": "registry",
     },
   },

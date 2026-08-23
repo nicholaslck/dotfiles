@@ -38,9 +38,6 @@ alias vi="nvim"
 export EDITOR=nvim
 export VISUAL=nvim
 
-# thefuck alias
-eval $(thefuck --alias)
-
 # lazygit alias
 alias lgit="lazygit"
 

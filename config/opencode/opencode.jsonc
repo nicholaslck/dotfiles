@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "github-copilot/claude-sonnet-4.6",
   "mcp": {
     "blender": {
       "enabled": false,
@@ -13,7 +12,7 @@
       "url": "https://mcp.context7.com/mcp/oauth",
     },
     "linear": {
-      "enabled": true,
+      "enabled": false,
       "type": "remote",
       "url": "https://mcp.linear.app/mcp",
     },
@@ -23,7 +22,7 @@
         "--app",
         "desktop",
       ],
-      "enabled": true,
+      "enabled": false,
       "type": "local",
     },
     "chrome-devtools": {
@@ -41,10 +40,11 @@
   },
   "agent": {
     "plan": {
-      "model": "github-copilot/claude-opus-4.6",
+      "model": "opencode/big-pickle",
     },
     "build": {
-      "model": "github-copilot/claude-sonnet-4.6",
+      "model": "opencode/big-pickle",
     },
   },
+  "shell": "zsh",
 }

@@ -29,21 +29,25 @@ export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 # pnpm
 export PNPM_HOME="$HOME/.pnpm"
 case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
+# pnpm end
 
 # bun
 export PATH="$HOME/.bun/bin:$PATH"
+
+# go binaries
+export PATH="$HOME/go/bin:$PATH"
 
 # CHROME_EXECUTABLE for flutter
 export CHROME_EXECUTABLE="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 # Android SDK
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+export PATH=$PATH:$HOME/Library/Android/sdk/emulator
 
-# Added by OrbStack: command-line tools and integration
-source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 # Added by Obsidian
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
@@ -51,3 +55,6 @@ export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/nicholaslck/.lmstudio/bin"
 # End of LM Studio CLI section
+
+# Added by ArcBox: command-line tools and integration
+source "/Users/nicholaslau/.arcbox/shell/init.zsh" 2>/dev/null || :
