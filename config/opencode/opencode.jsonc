@@ -30,6 +30,14 @@
       "enabled": false,
       "type": "local",
     },
+    "datasource-mcp": {
+      "type": "remote",
+      "url": "https://datasource-mcp.tim.internal/mcp",
+      "enabled": true,
+      "headers": {
+        "x-mcp-token": "{file:~/.secrets/datasource-mcp-token}",
+      },
+    },
   },
   "permission": {
     "bash": {
@@ -38,13 +46,8 @@
       "git push *": "ask",
     },
   },
-  "agent": {
-    "plan": {
-      "model": "opencode/big-pickle",
-    },
-    "build": {
-      "model": "opencode/big-pickle",
-    },
-  },
+  "lsp": true,
   "shell": "zsh",
+  "plugin": ["opencode-skill-creator"],
+  "model": "opencode-go/glm-5.3-flash",
 }

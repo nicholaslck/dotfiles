@@ -40,6 +40,7 @@
   },
   "base_keymap": "VSCode",
   "git_panel": {
+    "group_by": "staging",
     "dock": "left",
     "tree_view": true,
   },
