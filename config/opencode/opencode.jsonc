@@ -1,53 +1,53 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
-    "blender": {
-      "enabled": false,
-      "type": "local",
-      "command": ["uvx", "blender-mcp"],
-    },
-    "context7": {
-      "enabled": false,
-      "type": "remote",
-      "url": "https://mcp.context7.com/mcp/oauth",
-    },
-    "linear": {
-      "enabled": false,
-      "type": "remote",
-      "url": "https://mcp.linear.app/mcp",
-    },
-    "pencil": {
-      "command": [
-        "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
-        "--app",
-        "desktop",
-      ],
-      "enabled": false,
-      "type": "local",
-    },
-    "chrome-devtools": {
-      "command": ["bunx", "chrome-devtools-mcp"],
-      "enabled": false,
-      "type": "local",
-    },
-    "datasource-mcp": {
-      "type": "remote",
-      "url": "https://datasource-mcp.tim.internal/mcp",
-      "enabled": true,
-      "headers": {
-        "x-mcp-token": "{file:~/.secrets/datasource-mcp-token}",
+    "servers": {
+      "datasource-mcp": {
+        "type": "remote",
+        "url": "https://datasource-mcp.tim.internal/mcp",
+        "headers": {
+          "x-mcp-token": "{file:~/.secrets/datasource-mcp-token}",
+        },
+      },
+      "blender": {
+        "type": "local",
+        "command": ["uvx", "blender-mcp"],
+        "disabled": true,
+      },
+      "context7": {
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp/oauth",
+        "disabled": false,
+      },
+      "linear": {
+        "type": "remote",
+        "url": "https://mcp.linear.app/mcp",
+        "disabled": true,
+      },
+      "pencil": {
+        "type": "local",
+        "command": [
+          "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+          "--app",
+          "desktop",
+        ],
+        "disabled": true,
+      },
+      "chrome-devtools": {
+        "type": "local",
+        "command": ["bunx", "chrome-devtools-mcp"],
+        "disabled": true,
       },
     },
   },
-  "permission": {
-    "bash": {
-      "rm *": "ask",
-      "git *": "allow",
-      "git push *": "ask",
-    },
-  },
+  "permissions": [
+    { "action": "shell", "resource": "git *", "effect": "allow" },
+    { "action": "browser", "resource": "*", "effect": "deny" },
+    { "action": "shell", "resource": "git push *", "effect": "ask" },
+    { "action": "shell", "resource": "rm *", "effect": "ask" },
+  ],
   "lsp": true,
   "shell": "zsh",
-  "plugin": ["opencode-skill-creator"],
+  "plugins": ["opencode-skill-creator"],
   "model": "opencode-go/glm-5.3-flash",
 }
