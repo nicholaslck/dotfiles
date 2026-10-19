@@ -4,8 +4,8 @@ linemode = "size_and_mtime"
 
 [plugin]
   prepend_fetchers = [
-    { id = "git", url = "*", run = "git" },
-    { id = "git", url = "*/", run = "git" },
+    { id = "git", url = "*", run = "git", group = "git" },
+    { id = "git", url = "*/", run = "git", group = "git" },
   ]
   prepend_preloaders = [
     # Replace magick, image, video with mediainfo

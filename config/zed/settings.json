@@ -40,21 +40,12 @@
   },
   "base_keymap": "VSCode",
   "git_panel": {
+    "group_by": "staging",
     "dock": "left",
     "tree_view": true,
   },
   "agent_servers": {
-    "gemini": {
-      "type": "registry",
     },
-    "opencode": {
-      "default_config_options": {
-        "effort": "high",
-        "model": "opencode/deepseek-v4-flash-free"
-      },
-      "type": "registry",
-    },
-  },
   "ssh_connections": [],
   "icon_theme": {
     "mode": "system",
