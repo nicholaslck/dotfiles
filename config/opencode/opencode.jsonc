@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "instructions": ["~/.config/opencode/rules/*.md"],
   "mcp": {
     "servers": {
       "datasource-mcp": {
@@ -49,5 +50,18 @@
   "lsp": true,
   "shell": "zsh",
   "plugins": ["opencode-skill-creator"],
+  "agents": {
+    "quick": {
+      "description": "小任務:快速問答、改名、格式化、單檔小改",
+      "mode": "all",
+      "model": "opencode-go/glm-5.3-flash#low",
+    },
+    "build": {
+      "model": "opencode-go/glm-5.3-flash#max",
+    },
+    "plan": {
+      "model": "opencode-go/glm-5.3#max",
+    },
+  },
   "model": "opencode-go/glm-5.3-flash",
 }
