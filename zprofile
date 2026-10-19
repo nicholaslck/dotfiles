@@ -53,8 +53,8 @@ export PATH=$PATH:$HOME/Library/Android/sdk/emulator
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/nicholaslck/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 
 # Added by ArcBox: command-line tools and integration
-source "/Users/nicholaslau/.arcbox/shell/init.zsh" 2>/dev/null || :
+source "$HOME/.arcbox/shell/init.zsh" 2>/dev/null || : # managed by ArcBox

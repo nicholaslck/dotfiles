@@ -14,7 +14,8 @@ update: zap_update brew_update yazi_update tmux_update
 
 [group('install')]
 brew_install:
-    brew bundle install --file ./Brewfile
+  brew install --formulae $(cat brew-formulae.txt)
+  brew install --casks $(cat brew-casks.txt)
 
 [group('install')]
 yazi_install:
@@ -37,7 +38,7 @@ zap_update:
 [group('update')]
 brew_update:
     brew update
-    brew upgrade --greedy
+    brew upgrade --greedy-latest # ignore auto_update apps
 
 [group('update')]
 yazi_update:
@@ -49,11 +50,10 @@ tmux_update:
     [ -d $TPM_DIR ] && git -C $TPM_DIR pull
     $TPM_DIR/bin/update_plugins all
 
-# Export and save Brewfile
 [group('save')]
-save_brew:
-    scripts/brew-dump.sh .
-    git add ./Brewfile
+brew_export:
+    brew leaves -r > brew-formulae.txt
+    brew list --casks > brew-casks.txt
 
 # Move the source config file into dotfiles/ and create a symlink back
 [group('save')]

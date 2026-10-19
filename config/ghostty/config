@@ -1,2 +1,2 @@
 font-family = "FiraCode Nerd Font"
-theme = dark:catppuccin-mocha.conf,light:catppuccin-latte.conf
+theme = catppuccin-mocha.conf
