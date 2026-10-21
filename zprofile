@@ -57,4 +57,4 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 
 # Added by ArcBox: command-line tools and integration
-source "$HOME/.arcbox/shell/init.zsh" 2>/dev/null || : # managed by ArcBox
+source "/Users/nicholaslck/.arcbox/shell/init.zsh" 2>/dev/null || : # managed by ArcBox

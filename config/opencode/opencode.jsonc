@@ -9,6 +9,7 @@
         "headers": {
           "x-mcp-token": "{file:~/.secrets/datasource-mcp-token}",
         },
+        "disabled": true,
       },
       "blender": {
         "type": "local",
@@ -23,7 +24,7 @@
       "linear": {
         "type": "remote",
         "url": "https://mcp.linear.app/mcp",
-        "disabled": true,
+        "disabled": false,
       },
       "pencil": {
         "type": "local",
@@ -43,19 +44,16 @@
   },
   "permissions": [
     { "action": "shell", "resource": "git *", "effect": "allow" },
-    { "action": "browser", "resource": "*", "effect": "deny" },
     { "action": "shell", "resource": "git push *", "effect": "ask" },
     { "action": "shell", "resource": "rm *", "effect": "ask" },
+    { "action": "read", "resource": "/tmp/opencode/*", "effect": "allow" },
+    { "action": "edit", "resource": "/tmp/opencode/*", "effect": "allow" },
+    { "action": "execute", "resource": "/tmp/opencode/*", "effect": "allow" },
   ],
   "lsp": true,
   "shell": "zsh",
   "plugins": ["opencode-skill-creator"],
   "agents": {
-    "quick": {
-      "description": "小任務:快速問答、改名、格式化、單檔小改",
-      "mode": "all",
-      "model": "opencode-go/glm-5.3-flash#low",
-    },
     "build": {
       "model": "opencode-go/glm-5.3-flash#max",
     },
